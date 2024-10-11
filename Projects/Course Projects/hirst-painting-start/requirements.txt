@@ -1,0 +1,2 @@
+1. Make a loop to make a line of colors
+2. take that loop into another loop to
