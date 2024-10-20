@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b6afce7c-562f-4eb1-acb8-a21230542fd3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../CoffeMachine" beforeDir="false" afterPath="$PROJECT_DIR$/../CoffeMachine" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../password-manager-start" beforeDir="false" afterPath="$PROJECT_DIR$/../password-manager-start" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Personally Modified Projects/districts-of-bangladesh" beforeDir="false" afterPath="$PROJECT_DIR$/../../Personally Modified Projects/districts-of-bangladesh" afterDir="false" />
     </list>
@@ -18,21 +17,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2nVheswc2L8SKnmiXmN0zaMqit1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/01rohan/Documents/Python/100 Days of Python Course/Projects/Course Projects/coffee-and-wifi"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/01rohan/Documents/Python/100 Days of Python Course/Projects/Course Projects/coffee-and-wifi&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
