@@ -3,7 +3,7 @@ from flask import Flask, abort, render_template, redirect, url_for, flash
 from flask_bootstrap import Bootstrap5
 from flask_ckeditor import CKEditor
 from flask_gravatar import Gravatar
-from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user
+from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user, login_required
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
 from sqlalchemy import Integer, String, Text
@@ -172,10 +172,32 @@ def get_all_posts():
 
 
 # TODO: Allow logged-in users to comment on posts
-@app.route("/post/<int:post_id>")
+@app.route("/post/<int:post_id>", methods=["GET", "POST"])
 def show_post(post_id):
     requested_post = db.get_or_404(BlogPost, post_id)
     comment_form = CommentForm()
+    gravatar = Gravatar(app,
+                    size=100,
+                    rating='g',
+                    default='retro',
+                    force_default=False,
+                    force_lower=False,
+                    use_ssl=False,
+                    base_url=None)
+    if comment_form.validate_on_submit():
+        if current_user.is_authenticated:
+            new_comment = Comment(
+                text=comment_form.comment.data,
+                comment_author=current_user,
+                parent_post=requested_post
+            )
+            db.session.add(new_comment)
+            db.session.commit()
+            return redirect(url_for("show_post", post_id=post_id, gravatar=gravatar))
+        else:
+            flash("You must be logged in to comment.")
+            return redirect(url_for("login", post_id=post_id))
+        
     return render_template("post.html", post=requested_post, current_user=current_user, comment_form=comment_form)
 
 
